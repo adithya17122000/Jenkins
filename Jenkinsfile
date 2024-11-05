@@ -15,7 +15,6 @@ pipeline {
                     // Upgrade pip and install dependencies globally
                     bat '''
                     pip install --upgrade pip
-                    pip install -r requirements.txt
                     '''
                 }
             }
