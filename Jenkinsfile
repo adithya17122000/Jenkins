@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the source code from your version control system
-                git 'https://github.com/adithya17122000/Jenkins.git'
+                git url:'https://github.com/adithya17122000/Jenkins', branch:'main'
             }
         }
 
