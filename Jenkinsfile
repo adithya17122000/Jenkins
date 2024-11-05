@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the source code from your version control system
-                git url:'https://github.com/adithya17122000/Jenkins', branch:'main'
+                git url: 'https://github.com/adithya17122000/Jenkins', branch: 'main'
             }
         }
 
@@ -14,7 +14,8 @@ pipeline {
                 script {
                     // Upgrade pip and install dependencies globally
                     bat '''
-                    pip install --upgrade pip
+                    python -m pip install --upgrade pip
+                    
                     '''
                 }
             }
@@ -24,7 +25,7 @@ pipeline {
             steps {
                 script {
                     // Run tests using unittest
-                    bat 'python -m unittest discover -s tests'
+                    bat 'python test_calculator.py'
                 }
             }
         }
